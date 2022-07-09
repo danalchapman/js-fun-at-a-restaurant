@@ -28,8 +28,9 @@ function formatPrice(initialPrice) {
 function decreasePrice(price) {
   // should decrease menuItem.price by 10%
   // menuItem.price * .90
-  var decreasedPrice = price * .9;
-  return decreasedPrice
+  // var decreasedPrice = price * .9;
+  // return decreasedPrice --> this returns the same as the return below
+  return price * .9
 }
 
 function createRecipe(title, ingredients, type) {

@@ -108,7 +108,7 @@ describe("meal.js", function() {
     });
   });
 
-  describe("decreasePrice", function() {
+  describe.only("decreasePrice", function() {
     it("should be a function", function () {
       assert.isFunction(decreasePrice);
     });
@@ -122,7 +122,7 @@ describe("meal.js", function() {
     })
   })
 
-  describe.only("createRecipe", function() {
+  describe("createRecipe", function() {
     it("should be a function", function () {
       assert.isFunction(createRecipe);
     });
