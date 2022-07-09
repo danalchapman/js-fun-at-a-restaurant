@@ -14,19 +14,22 @@ function createMenuItem(name, price, type) {
 }
 
 function addIngredients(ingredientsToAdd, ingredients) {
-  ingredients[0] = "cheese";
-  //for (var i = 0; i < ingredients.length; i++) {
-    //if (ingredients[i] <=3) {
-      return ingredients
-    //}
-  //}
+  // we only push ingredientsToAdd if they return false;
+  if (ingredients.includes(ingredientsToAdd) === false) {
+    ingredients.push(ingredientsToAdd)
+  }
+}
+
+function formatPrice(initialPrice) {
+  // add a $ in front of the price
+  return `$${initialPrice}`
 }
 
 module.exports = {
   nameMenuItem,
   createMenuItem,
   addIngredients,
-  // formatPrice,
+  formatPrice,
   // decreasePrice,
   // createRecipe
 }
