@@ -1,10 +1,10 @@
 function nameMenuItem(name) {
-  var menuItemName = name
+  // var menuItemName = name
   return `Delicious ${name}`
 }
 
 function createMenuItem(name, price, type) {
-  var menuItemName = name;
+  // var menuItemName = name;
   var menuItem = {
     name: name,
     price: price,
@@ -25,11 +25,27 @@ function formatPrice(initialPrice) {
   return `$${initialPrice}`
 }
 
+function decreasePrice(price) {
+  // should decrease menuItem.price by 10%
+  // menuItem.price * .90
+  var decreasedPrice = price * .9;
+  return decreasedPrice
+}
+
+function createRecipe(title, ingredients, type) {
+  var recipe = {
+    title: title,
+    ingredients: ingredients,
+    type: type
+  }
+  return recipe
+}
+
 module.exports = {
   nameMenuItem,
   createMenuItem,
   addIngredients,
   formatPrice,
-  // decreasePrice,
-  // createRecipe
+  decreasePrice,
+  createRecipe
 }
